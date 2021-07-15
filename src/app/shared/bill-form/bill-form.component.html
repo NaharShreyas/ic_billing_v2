@@ -1,0 +1,20 @@
+<p>bill-form works!</p>
+<form [formGroup]="bioSection" >
+    <div class="form-group">
+        <!-- <lable for='firstName'></lable> -->
+        <label for="firstName">First Name </label>
+        <input ngModel name='firstName' formControlName="firstName" id='firstName' type="text" >
+    </div>
+    <div >
+        <label for="comment">comment </label>
+        <textarea type="text" id="comment" ></textarea>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>
+
+<form action="">
+    <label for="name">Name: </label>
+    <input id="name" type="text" [formControl]="name">
+    <p>Value: {{ name.value }}</p>
+    <button (click)="updateName()">Update Name</button>
+</form>
